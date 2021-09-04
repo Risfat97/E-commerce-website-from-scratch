@@ -1,0 +1,110 @@
+:root{
+    --body-bg-color-0: #def2f1;
+    --body-bg-color-1: #FFF;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /*background: linear-gradient(to bottom, var(--body-bg-color-0), var(--body-bg-color-1));*/
+    background: var(--body-bg-color-0);
+}
+
+.navbar-brand{
+    font-family: Lobster, monospace;
+}
+
+.price-container{
+    position: relative;
+}
+
+.text-euro{
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 2.3;
+    border: 1px solid black;
+}
+
+.container-fluid{
+    margin-top: 70px;
+}
+
+.search-item-container,
+.add-item-container{
+    position: relative;
+}
+
+#search-item,
+.btn-search{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    border-radius: 1.2em;
+}
+
+.btn-search{
+    font-size: 1em;
+    pointer-events: all;
+}
+
+.item-added{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    animation-name: alerting;
+    animation-duration: 2s;
+}
+
+.show-alerting{
+    display: block;
+}
+
+@keyframes alerting {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.1;
+    }
+}
+
+.payment-card{
+    width: 465px;
+    background: linear-gradient(to right, rgb(44, 62, 80), rgba(52, 73, 94));
+    border-radius: 1em;
+}
+
+.form-control-payment,
+.custom-select{
+    background: rgb(52, 73, 94);
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.fa-cc-visa{
+    background-color: #FFF;
+    font-size: 1.5em;
+}
+
+.error{
+    opacity: 0;
+    animation-name: opaAnim;
+    animation-duration: 3s;
+}
+
+@keyframes opaAnim {
+    0%{
+        opacity: 1;
+        display: block;
+    }
+    100%{
+        opacity: 1;
+    }
+}
